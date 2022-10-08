@@ -119,4 +119,32 @@ ggplot(stack(dfinter2), aes(x = ind,y = values)) +
   geom_boxplot()
 
 
+#Cut the dendrogram for the hierarchy  k =6 parts
+cutdend3<-cutree(ahc, k=6)
+
+
+#log transformation process for second dataset meant for k=6
+data3<- as.data.frame(sapply(advir[,6:69],as.numeric))
+data3<-log(data+1)
+
+#rownames again assigned as in advir k=6
+rownames(data)<-advir$SpeciesName
+
+#Pheatmap() for a publication ready visualization is created for k=6 structure
+pheatmap(data, cutree_rows = 6)
+
+
+#Last setting for k=6 to check the silhouette differences between k=7 and k-6
+#Same steps as in previous two setting except for k=6
+hid3=cls.scatt.data(data3,cutdend3, dist = "euclidean")
+dfinter3=as.data.frame(hid3$intercls.complete)
+intradim3<-hid3$intracls.complete
+att3<- cls.attrib(data3,cutdend3)
+clsize3<-att3$cluster.size
+dfinter3=as.data.frame(hid3$intercls.complete)
+ggplot(stack(dfinter3), aes(x = ind,y = values)) +
+  geom_boxplot()
+
+
+
 
