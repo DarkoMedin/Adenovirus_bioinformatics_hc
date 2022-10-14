@@ -1,5 +1,5 @@
 # Adenovirus_bioinformatics_hc
-Bioinformatics analysis of Adenovirus strains using the Codon usage dataset
+Bioinformatics analysis of Adenovirus strains using the Codon usage dataset in R/RStudio
 The analysis includes the following libraries 
 #The required libraries
 library(factoextra)
