@@ -85,7 +85,7 @@ ggplot(stack(dfinter), aes(x = ind,y = values)) +
 #This will  create the alliterative hierarchical clustering dendrogram
 #but this time using k as 7, much better biologically speaking
 fviz_dend(ahc, cex = 0.7, k = 7,
-          k_colors = c("blue", "green3", "red", "aquamarine","orange","darkgoldenrod1","gray"),
+          k_colors = c("blue", "green3", "red", "aquamarine","orange","purple","gray"),
           rect = TRUE, lower_rect = -0.1, rect_lty = 4 )
 
 
@@ -121,7 +121,7 @@ ggplot(stack(dfinter2), aes(x = ind,y = values)) +
 
 #Visualize the dendrogram with k=6
 fviz_dend(ahc, cex = 0.7, k = 6,
-          k_colors = c("blue", "green3", "red", "aquamarine","orange","darkgoldenrod1","gray"),
+          k_colors = c("blue", "green3", "red", "aquamarine","orange","purple","gray"),
           rect = TRUE, lower_rect = -0.1, rect_lty = 4 )
 
 
