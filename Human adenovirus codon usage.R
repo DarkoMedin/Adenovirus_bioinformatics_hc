@@ -119,6 +119,13 @@ ggplot(stack(dfinter2), aes(x = ind,y = values)) +
   geom_boxplot()
 
 
+#Visualize the dendrogram with k=6
+fviz_dend(ahc, cex = 0.7, k = 6,
+          k_colors = c("blue", "green3", "red", "aquamarine","orange","darkgoldenrod1","gray"),
+          rect = TRUE, lower_rect = -0.1, rect_lty = 4 )
+
+
+
 #Cut the dendrogram for the hierarchy  k =6 parts
 cutdend3<-cutree(ahc, k=6)
 
